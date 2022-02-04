@@ -1,0 +1,30 @@
+aside {
+  background-color: rgb(233, 222, 101);
+  padding: 9px;
+  max-width: 900px;
+  font-size: 18px;
+  position: absolute;
+  left: 20%;
+  top: 4%;
+}
+h2 {
+  text-align: center;
+}
+aside > ol > li {
+  list-style-type: upper-roman;
+  margin: 11px 11px 11px 31px;
+  color: blue;
+}
+
+button {
+  /* position: absolute;
+  right: 5px;
+  top: 5px; */
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  aside {
+    left: 0;
+  }
+}
