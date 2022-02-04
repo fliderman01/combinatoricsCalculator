@@ -78,6 +78,18 @@ export default function App() {
   return (
     <div className="main">
       <Instruction />
+      <button
+        onClick={() => {
+          setNumOfTasks('');
+          setNumOfRepeatedTasks('');
+          setSecond('');
+          setThird('');
+          setFourth('');
+          setFifth('');
+        }}
+      >
+        Clear
+      </button>
       <h1>Combinatorics calculator!</h1>
 
       <p id="upOutput">
@@ -97,66 +109,72 @@ export default function App() {
       <label htmlFor="NumOfTasks">
         Number of Tasks
         <input
-          type="text"
+          type="number"
           value={NumOfTasks}
           id="NumOfTasks"
           onChange={(e) => setNumOfTasks(e.target.value)}
-          autoFocus
+          // autoFocus
+          min="0"
         />
       </label>
       <br />
       <label htmlFor="NumOfRepeatedTasks">
         Repeated task <b>One</b>
         <input
-          type="text"
+          type="number"
           value={NumOfRepeatedTasks}
           id="NumOfRepeatedTasks"
           onChange={(e) => setNumOfRepeatedTasks(e.target.value)}
           disabled={!NumOfTasks && true}
+          min="0"
         />
       </label>
       <br />
       <label htmlFor="Second">
         Repeated task <b>Two</b>
         <input
-          type="text"
+          type="number"
           value={Second}
           id="Second"
           onChange={(e) => setSecond(e.target.value)}
           disabled={!NumOfRepeatedTasks && true}
+          min="0"
         />
       </label>
       <br />
       <label htmlFor="Third">
         Repeated task <b>Three</b>
         <input
-          type="text"
+          type="number"
           value={Third}
           id="Third"
           onChange={(e) => setThird(e.target.value)}
           disabled={!Second && true}
+          min="0"
         />
       </label>
       <br />
       <label htmlFor="Fourth">
         Repeated task <b>Four</b>
         <input
-          type="text"
+          type="number"
           value={Fourth}
           id="Fourth"
           onChange={(e) => setFourth(e.target.value)}
           disabled={!Third && true}
+          min="0"
         />
       </label>
       <br />
       <label htmlFor="Fifth">
         Repeated task <b>Five</b>
         <input
-          type="text"
+          type="number"
           value={Fifth}
           id="Fifth"
           onChange={(e) => setFifth(e.target.value)}
           disabled={!Fourth && true}
+          min="0"
         />
       </label>
       <br />
