@@ -63,4 +63,3 @@ export default function Instruction() {
     </div>
   );
 }
-// compshi onhoverze gamochndes da mobilur planshetshi on clickze
